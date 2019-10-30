@@ -1,0 +1,107 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<title>jQuery fancyTable: Table Search, Filter, Sort Plugin Demos</title>
+		<link href="https://www.jqueryscript.net/css/jquerysctipttop.css" rel="stylesheet" type="text/css">
+		<link href='http://fonts.googleapis.com/css?family=Roboto+Condensed' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootswatch/4.1.3/flatly/bootstrap.min.css">
+<style>
+body { background-color: #fafafa; font-family: 'Roboto Condensed'; }
+.container { margin: 150px auto; }
+</style>
+	</head>
+	<body><div id="jquery-script-menu">
+<div class="jquery-script-center">
+<ul>
+<li><a href="https://www.jqueryscript.net/table/sorting-filtering-pagination-fancytable.html">Download This Plugin</a></li>
+<li><a href="https://www.jqueryscript.net/">Back To jQueryScript.Net</a></li>
+</ul>
+<div class="jquery-script-ads"><script type="text/javascript"><!--
+google_ad_client = "ca-pub-2783044520727903";
+/* jQuery_demo */
+google_ad_slot = "2780937993";
+google_ad_width = 728;
+google_ad_height = 90;
+//-->
+</script>
+<script type="text/javascript"
+src="https://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script></div>
+<div class="jquery-script-clear"></div>
+</div>
+</div>
+		<div class="container">
+			<h1>jQuery fancyTable: Table Search, Filter, Sort Plugin Demos</h1>
+			<table id="sampleTableA" class="table table-striped table-bordered sampleTable">
+				<thead>
+					<tr>
+						<th>Col A</th>
+						<th>Col B</th>
+						<th>Col C</th>
+					</tr>
+				</thead>
+				<tbody>
+				</tbody>
+			</table>
+			<table id="sampleTableB" class="table table-striped sampleTable">
+			</table>
+		</div>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/js/bootstrap.min.js"></script>
+		<script src="../src/fancyTable.js"></script>
+		<script type="text/javascript">
+			// Word genarator
+			function rWord(r){var t,n="bcdfghjklmnpqrstvwxyz",a="aeiou",e=function(r){return Math.floor(Math.random()*r)},o="";r=parseInt(r,10),n=n.split(""),a=a.split("");for(t=0;t<r/2;t++){var l=n[e(n.length)],p=a[e(a.length)];o+=0===t?l.toUpperCase():l,o+=2*t<r-1?p:""}return o}
+
+			$(document).ready(function() {
+				// Generate a big table
+				for(var n=0;n<1000;n++){
+					var row = $("<tr>");
+					$("#sampleTableA").find("thead th").each(function() {
+						$("<td>",{
+							html: rWord(8),
+							style:"padding:2px;"
+						}).appendTo($(row));
+					});
+					row.appendTo($("#sampleTableA").find("tbody"));
+				}
+				// And a simple one
+				for(var n=0;n<10;n++){
+					var row = $("<tr>");
+					for(var nn=0;nn<5;nn++){
+						$("<td>",{
+							html: rWord(8),
+							style:"padding:2px;"
+						}).appendTo($(row));
+					}
+					row.appendTo($("#sampleTableB"));
+				}
+				// And make them fancy
+				$(".sampleTable").fancyTable({
+					sortColumn:0,
+					pagination: true,
+					perPage:5,
+					globalSearch:true,
+					paginationClass: "btn btn-info"
+				});
+			});
+		</script>
+	</body>
+	<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-36251023-1']);
+  _gaq.push(['_setDomainName', 'jqueryscript.net']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+</html>
