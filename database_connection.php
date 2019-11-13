@@ -1,7 +1,7 @@
 <?php
 //database_connection.php
 
-$connect = new PDO('mysql:host=192.206.45.26;dbname=testing2', 'rm', 'gamedb##321##');
+$connect = new PDO('mysql:host=localhost;dbname=testing2', 'root', '');
 session_start();
 
 if(mysqli_connect_errno()){

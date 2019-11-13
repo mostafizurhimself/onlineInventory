@@ -1,7 +1,7 @@
 <?php
-$servername = "192.206.45.26";
-$username = "rm";
-$password = "gamedb##321##";
+$servername = "localhost";
+$username = "root";
+$password = "";
 $dbname = "testing2";
 
 // Create connection

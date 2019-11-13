@@ -87,6 +87,9 @@ if(isset($_POST["login"]))
 						<div class="form-group">
 							<input type="submit" name="login" value="Login" class="btn btn-info btn-block" />
 						</div>
+						<div align='center' class="mt-3">
+							<h4><strong>Email:</strong>999itsolution@gmail.com <strong>Password:</strong>mama@1234</h4>
+						</div>
 					</form>
 				</div>
 			</div>
